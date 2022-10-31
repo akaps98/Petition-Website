@@ -7,4 +7,4 @@
 |s3926977|          Doan Thien Di           |@Di-Doan|
 |s3864235|           Lee Seungmin           |@Seungmin-L|
 |s3912055|           Han Yeeun              ||
-|s3885751|         Hoang Duc Phuong         ||
+|s3885751|         Hoang Duc Phuong         |@HoangDucPhuong|
