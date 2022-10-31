@@ -1,5 +1,5 @@
-# Store order management system
-## COSC2081 - Group 5
+# Petition Website
+## COSC2634 - No Name
 ### Team Member
 |sID|               Name               |Github ID|
 |:---:|:--------------------------------:|:---:|
