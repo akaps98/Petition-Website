@@ -1,0 +1,181 @@
+.theme-link-variant-3 {
+    color: inherit;
+    font: 700 18px/24px 'op__roboto--slab', serif;
+    text-transform: none;
+}
+
+.theme-background-variant-6 {
+    background-color: #fff;
+    border-color: #dedede;
+    color: #3e3d40;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body { 
+    -ms-overflow-style: none; 
+} 
+
+hr {
+    margin: 0 auto;
+    border-top: 1px solid #bbb;
+    box-shadow: 0 10px 10px -10px #bbb inset;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+.masthead {
+    width: 100%;
+    height: 800px;
+}
+
+.upmost {
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.fw-bold {
+    padding-left: 50px;
+    font-family: nunito;
+}
+
+.nav-link {
+    color: gray;
+    float: right;
+    background-color: whitesmoke;
+    border: 0;
+    outline: 0;
+    font-family: nunito;
+    margin-left: 17px;
+}
+
+.nav-link:hover {
+    color: black;
+}
+
+.navbar {
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+}
+
+.logo {
+    color: black;
+}
+
+.logo:hover {
+    color: black;
+    transform: rotateY( 180deg );
+}
+
+.nav_cont {
+    justify-content: center;
+    display: flex;
+    padding-top: 0;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 7px;
+}
+
+.nav_list {
+    justify-content: center;
+    display: flex;
+    margin: 0 18px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+li {
+    margin: 0 150px;
+    list-style: none;
+    padding: 0;
+    display: list-item;
+}
+
+li:hover {
+    mix-blend-mode: difference;
+}
+
+.copyright {
+    text-align: center;
+    font-family: nunito;
+}
+
+.raiseyourvoice {
+    margin-top: 60px; 
+    color:black; 
+    font-family:montserrat
+}
+
+.makeyourlife {
+    color:black; 
+    font-family:raleway
+}
+
+.letspetition {
+    font-family: nunito;
+}
+
+.nav_cont .nav_list li .menu {
+    display: block;
+    font-size: 18px;
+    color: #181819;
+    letter-spacing: -0.5px;
+    font-weight: 700;
+}
+
+.menu {
+    font-family: nunito;
+}
+
+.menu:link {
+    text-decoration: none;
+}
+
+.second-main {
+    margin-top: 20px;
+    background-color: #4b89dc;
+    position: relative;
+    max-width:1920px;
+}
+
+.instruction {
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 60px;
+}
+
+.howtopetition {
+    padding-top: 0.1px;
+}
+
+.steps {
+    background-color: white;
+    display: inline-block;
+    width: 300px;
+    height: 150px;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.bi {
+    margin-top: 7px;
+}
+
+.first-inst {
+    padding-top: 10px;
+    font-family: nunito;
+}
