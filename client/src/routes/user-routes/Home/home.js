@@ -32,7 +32,7 @@ const Home = () => {
                 </div>
             </div>
         </div>
-        <div class="container second-main">
+        <div class="second-main">
             <div class="justify-content-center">
                 <div class="text-center howtopetition">
                     <h1 class="mb-3 raiseyourvoice">How to petition?</h1>
