@@ -1,14 +1,11 @@
-.theme-link-variant-3 {
-    color: inherit;
-    font: 700 18px/24px 'op__roboto--slab', serif;
-    text-transform: none;
-}
-
-.theme-background-variant-6 {
-    background-color: #fff;
-    border-color: #dedede;
-    color: #3e3d40;
-}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 450%);
+    border: 5px hidden;
+    background-color: whitesmoke;
+  }
 
 * {
     box-sizing: border-box;
