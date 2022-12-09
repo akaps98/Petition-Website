@@ -38,49 +38,83 @@ const MyBillboards = () => {
       <div className="row filters">
         <div className="col-12 col-sm-3 filter-container">
           Billboard type
-            <select className="col-12 col-md-4 form-select" aria-label="Select billboard type" onChange={e => {
-              let selectedType = e.target.value; setBillboardType(selectedType)
-            }}>
-              <option defaultValue="All">All</option>
-              <option value="Traditional">Traditional</option>
-              <option value="Digital">Digital</option>
-            </select>
+          <select
+            className="col-12 col-md-4 form-select"
+            aria-label="Select billboard type"
+            onChange={(e) => {
+              let selectedType = e.target.value;
+              setBillboardType(selectedType);
+            }}
+          >
+            <option defaultValue="All">All</option>
+            <option value="Sport">Sport</option>
+            <option value="Education">Education</option>
+            <option value="Environment">Environment</option>
+            <option value="Animal">Animal</option>
+            <option value="Health">Health</option>
+          </select>
         </div>
         <div className="col-12 col-md-4 filter-container">
           Status
-          <select className="form-select" aria-label="Select status" onChange={e => {
-            let selectedType = e.target.value; setBillboardStatus(selectedType)
-          }}>
+          <select
+            className="form-select"
+            aria-label="Select status"
+            onChange={(e) => {
+              let selectedType = e.target.value;
+              setBillboardStatus(selectedType);
+            }}
+          >
             <option defaultValue="All">All</option>
-            <option value="Available">Available</option>
-            <option value="Occupied">Occupied</option>
+            <option value="Available">Completed</option>
+            <option value="Occupied">Incompleted</option>
           </select>
         </div>
         <div className="col-12 col-md-4 btn-container">
           <AddBillBoardModal />
         </div>
       </div>
-      {!loading ?
-                <div className="loadingDiv">
-                    <Spinner className="spinner" animation="grow" />
-                    <Spinner className="spinner" animation="grow" />
-                    <Spinner className="spinner" animation="grow" />
-                </div>
-                : null}
+      {!loading ? (
+        <div className="loadingDiv">
+          <Spinner className="spinner" animation="grow" />
+          <Spinner className="spinner" animation="grow" />
+          <Spinner className="spinner" animation="grow" />
+        </div>
+      ) : null}
       <div className="row" id="items">
-        {billboards.filter(item => {
-          if (billboardType === "All" && billboardStatus === "All") {
-            return item.type === "Digital" || item.type === "Traditional" || item.status === "Available" || item.status === "Occupied"
-          } else if (billboardType === "All" && billboardStatus !== "All") {
-            return (item.type === "Digital" || item.type === "Traditional") && item.status === billboardStatus
-          } else if (billboardType !== "All" && billboardStatus === "All") {
-            return item.type === billboardType && (item.status === "Available" || item.status === "Occupied")
-          }
-          else {
-            return item.type === billboardType && item.status === billboardStatus
-          }
-        }).map(filteredItem => <Card id={filteredItem?._id} title={filteredItem?.title} description={filteredItem?.description} price={filteredItem?.price} billboardImg={filteredItem.billboardImg}></Card>)}
-
+        {billboards
+          .filter((item) => {
+            if (billboardType === "All" && billboardStatus === "All") {
+              return (
+                item.type === "Digital" ||
+                item.type === "Traditional" ||
+                item.status === "Available" ||
+                item.status === "Occupied"
+              );
+            } else if (billboardType === "All" && billboardStatus !== "All") {
+              return (
+                (item.type === "Digital" || item.type === "Traditional") &&
+                item.status === billboardStatus
+              );
+            } else if (billboardType !== "All" && billboardStatus === "All") {
+              return (
+                item.type === billboardType &&
+                (item.status === "Available" || item.status === "Occupied")
+              );
+            } else {
+              return (
+                item.type === billboardType && item.status === billboardStatus
+              );
+            }
+          })
+          .map((filteredItem) => (
+            <Card
+              id={filteredItem?._id}
+              title={filteredItem?.title}
+              description={filteredItem?.description}
+              price={filteredItem?.price}
+              billboardImg={filteredItem.billboardImg}
+            ></Card>
+          ))}
       </div>
     </main>
   );

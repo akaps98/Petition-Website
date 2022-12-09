@@ -8,16 +8,12 @@ import './index.css';
 function ModalContact() {
   const [owner] = useState(sessionStorage.getItem("userEmail"));
   const [title, setTitle] = useState("");
-  const [type, setType] = useState("Traditional");
-  const [area, setArea] = useState("District 1");
-  const [price, setPrice] = useState("");
+  const [type, setType] = useState("Sport");
+  const [goal, setGoal] = useState("");
   const [description, setDescription] = useState("");
   const [file, setFile] = useState(null);
   const handleChangeType = (e) => {
     setType(e.target.value);
-  };
-  const handleChangeArea = (e) => {
-    setArea(e.target.value);
   };
   const onInputChange = (e) => {
     setFile(e.target.files[0]);
@@ -27,27 +23,26 @@ function ModalContact() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    try {
-      fetch("http://localhost:5000/billboards/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          owner: owner,
-          title: title,
-          type: type,
-          area: area,
-          price: price,
-          description: description,
-        }),
-      }).then((res) => getResponse(res));
-    } catch (err) {
-      console.error(err);
-    }
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     fetch("http://localhost:5000/billboards/", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify({
+  //         owner: owner,
+  //         title: title,
+  //         type: type,
+  //         goal: goal,
+  //         description: description,
+  //       }),
+  //     }).then((res) => getResponse(res));
+  //   } catch (err) {
+  //     console.error(err);
+  //   }
+  // };
 
   const onFormSubmit = async (e) => {
     e.preventDefault();
@@ -57,8 +52,7 @@ function ModalContact() {
     formData.append("owner", owner);
     formData.append("title", title);
     formData.append("type", type);
-    formData.append("area", area);
-    formData.append("price", price);
+    formData.append("goal", goal);
     formData.append("description", description);
     const config = {
       headers: {
@@ -85,7 +79,7 @@ function ModalContact() {
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Add Your Billboard</Modal.Title>
+          <Modal.Title>Add Your Petition</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form onSubmit={onFormSubmit}>
@@ -97,7 +91,7 @@ function ModalContact() {
               <Form.Control
                 type="text"
                 name="billboard_tile"
-                placeholder="Ex: Billboard at Turtle Lake, HCM"
+                placeholder="Ex: Helping Tina"
                 autoFocus
                 required
                 onChange={(e) => {
@@ -121,16 +115,19 @@ function ModalContact() {
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="kindOfStand">
-              <Form.Label>Type</Form.Label>
+              <Form.Label>Category</Form.Label>
               <Form.Select
                 aria-label="Default select example"
                 value={type}
                 required
                 onChange={handleChangeType}
               >
-                <option disabled>Type of the billboard</option>
-                <option value="Traditional">Traditional</option>
-                <option value="Digital">Digital</option>
+                <option disabled>Category of the petiton</option>
+                <option value="Sport">Sport</option>
+                <option value="Education">Education</option>
+                <option value="Environment">Environment</option>
+                <option value="Animal">Animal</option>
+                <option value="Health">Health</option>
               </Form.Select>
             </Form.Group>
 
@@ -138,35 +135,17 @@ function ModalContact() {
               className="mb-3"
               controlId="ModalContactForm.ControlInput1"
             >
-              <Form.Label>Area</Form.Label>
-              <Form.Select
-                aria-label="Default select example"
-                value={area}
-                required
-                onChange={handleChangeArea}
-              >
-                <option disabled>Area in which the billboard is located</option>
-                <option value="District 1">District 1</option>
-                <option value="District 2">District 2</option>
-                <option value="District 3">District 3</option>
-              </Form.Select>
-            </Form.Group>
-
-            <Form.Group
-              className="mb-3"
-              controlId="ModalContactForm.ControlInput1"
-            >
-              <Form.Label>Price</Form.Label>
+              <Form.Label>Goal</Form.Label>
               <InputGroup>
                 <Form.Control
                   type="text"
-                  placeholder="Price for renting per year"
+                  placeholder="Enter your goal"
                   required
                   onChange={(e) => {
-                    setPrice(e.target.value);
+                    setGoal(e.target.value);
                   }}
                 />
-                <InputGroup.Text>VND</InputGroup.Text>
+                <InputGroup.Text>Signatures</InputGroup.Text>
               </InputGroup>
             </Form.Group>
 
