@@ -82,30 +82,6 @@ const MyBillboards = () => {
       ) : null}
       <div className="row" id="items">
         {billboards
-          .filter((item) => {
-            if (billboardType === "All" && billboardStatus === "All") {
-              return (
-                item.type === "Digital" ||
-                item.type === "Traditional" ||
-                item.status === "Available" ||
-                item.status === "Occupied"
-              );
-            } else if (billboardType === "All" && billboardStatus !== "All") {
-              return (
-                (item.type === "Digital" || item.type === "Traditional") &&
-                item.status === billboardStatus
-              );
-            } else if (billboardType !== "All" && billboardStatus === "All") {
-              return (
-                item.type === billboardType &&
-                (item.status === "Available" || item.status === "Occupied")
-              );
-            } else {
-              return (
-                item.type === billboardType && item.status === billboardStatus
-              );
-            }
-          })
           .map((filteredItem) => (
             <Card
               id={filteredItem?._id}

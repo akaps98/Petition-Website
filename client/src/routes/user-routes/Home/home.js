@@ -1,4 +1,5 @@
 import { React, useState, useEffect } from "react";
+import { Link } from "react-router-dom"
 import './home.css';
 import Card from "../../../components/Card/card";
 import Slider from "../../../components/Slider/slider";
@@ -27,7 +28,10 @@ const Home = () => {
                     <div class="text-center">
                         <h1 class="mb-3 raiseyourvoice">Raise your voice</h1>
                         <h1 class="fs-5 mb-4 makeyourlife">Make your life relaxed, make other's life beautiful</h1>
-                        <button type="button" class="btn btn-outline-primary letspetition">Let's petition!</button>
+                        <Link to="/#">
+                            <button type="button" class="btn btn-outline-primary letspetition">Let's petition!</button>
+                        </Link>
+                        
                     </div>
                 </div>
             </div>

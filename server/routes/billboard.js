@@ -50,9 +50,8 @@ billboardRouter.post(
       try {
         const owner = req.body.owner;
         const title = req.body.title;
-        const price = req.body.price;
+        const goal = req.body.goal;
         const description = req.body.description;
-        const area = req.body.area;
         const billboardType = req.body.type;
         var img = fs.readFileSync(req.file.path);
         var encode_img = img.toString("base64");
@@ -68,19 +67,16 @@ billboardRouter.post(
         if (!billboardType)
           return res.status(400).send("Please enter the type!" );
         // Check if area input is empty
-        if (!area)
-          return res.status(400).send("Please enter the area!" );
         // Check if price input is empty
-        if (!price)
-          return res.status(400).send("Please enter the price!");
+        if (!goal)
+          return res.status(400).send("Please enter the goal!");
 
         // Add new billboard
         const newBillboard = new billboardSchema({
           owner: owner,
           title: title,
           type: billboardType,
-          area: area,
-          price: price,
+          goal: goal,
           description: description,
           billboardImg: final_img,
         });
