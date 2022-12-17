@@ -7,7 +7,7 @@
 
 .tab {
     font-size: 20px;
-    padding: 0.5rem 0;
+    padding: 10px;
     color: #000;
     transition: all 0.5s ease;
     text-align: left !important;
@@ -23,13 +23,15 @@
 
 .tab.active,
 .tab:hover {
+    padding: 10px;
     font-weight: bold;
     color: #000000;
     background: rgb(225, 222, 222);
 }
 
 .tab.active {
-    border-bottom: 2.5px solid #3aafa9;
+    padding: 10px;
+    border-bottom: 2.5px solid #5a88d7;
 }
 
 @media screen and (max-width: 992px) {
