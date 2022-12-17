@@ -1,19 +1,5 @@
-// import React from "react";
-// import { useParams } from "react-router-dom";
-// import "./details.css";
-
-// // This is the billboard details page of the web application
-// const Details = () => {
-//     const {_id} = useParams();
-//     return(
-//         <p>Billboard's ID: {_id}</p>
-//     )
-// };
-
-// export default Details;
-
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./details.css";
+// import "./details.css";
 import ProfileCard from "../../../components/Profile Card/Card";
 import Features from "../../../components/Profile Card/MediaTable";
 import EditBillboardModal from "../../../components/Edit Billboard Modal";
@@ -65,6 +51,7 @@ if (billboards) {
             </div>
             <div className="col p-3">
               <Features
+                title={billboards[0].title}
                 description={billboards[0].description}
                 area={billboards[0].area}
                 price={billboards[0].price}
