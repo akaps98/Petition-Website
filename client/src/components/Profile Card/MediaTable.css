@@ -1,4 +1,15 @@
-.table{
-    border: 1px solid;
-    background: rgb(224, 217, 217);
+.table{  
+    /* border-radius: 5px; */
+    border: 1.5px solid rgb(205, 205, 205);
+    background: rgb(255, 255, 255);
+    /* box-shadow: 0px 0px 10px 0.5px #5a88d7; */
+}
+
+.petitionTable {
+    text-align: justify;
+    align-items: center;
+}
+
+td {
+    text-align: justify !important;
 }

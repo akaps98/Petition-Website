@@ -12,21 +12,21 @@ const ProfileCard = (props) => {
   };
 
   return (
-    <Card style={{ width: "18rem" }} className="box">
+    <Card className="box">
       <Card.Img
         variant="top"
         src={`data: ${props.billboardImg.contentType};base64, ${props.billboardImg.image}`}
         className="image-box"
       />
       <Card.Body>
-        <Card.Title>{props.title}</Card.Title>
+        <Card.Title className="title">{props.title}</Card.Title>
+        {/* I think 'goal status' should be here */}
         {/* <Card.Text>{card.text}</Card.Text> */}
 
         {/* If owner, not showing Contact button */}
         {!sessionStorage.getItem("token") ? (
-          <p style={{ color: "#36A19C" }}>
-            <sub>Please log in to contact the owner</sub>
-          </p>
+            <p className="guestmsg">
+            <sub>Please log in to support</sub></p>
         ) : props.billboardOwnerEmail != sessionStorage.getItem("userEmail") ? (
           <ModalContact billboardID={props._id} billboardOwnerEmail={props.billboardOwnerEmail} />
         ) : (

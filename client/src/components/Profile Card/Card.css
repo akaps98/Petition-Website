@@ -1,8 +1,28 @@
+.image-box {
+    border-radius: 0px;
+}
+
+.title {
+    font-size: x-large;
+    font-weight: bold;  
+    text-align: justify;
+  }
+
 .box {
-  width: 18rem;
-  margin: 20px;
+    border-radius: 0px;
+  width: 27rem;
+  margin: 17px;
+  /* border-width: 0px; */
   text-align: center;
-  border: 1px solid;
+  border: 1.5px solid rgb(205, 205, 205);
+  /* box-shadow: 0px 0px 10px 0.5px #5a88d7; */
+}
+
+
+.guestmsg {
+  color: #5a88d7;
+  text-align: center;
+  font-weight: bold;
 }
 
 .grid {
@@ -19,4 +39,8 @@
 
 .word {
   align-items: center;
+}
+
+.btn {
+    text-align: center;
 }
