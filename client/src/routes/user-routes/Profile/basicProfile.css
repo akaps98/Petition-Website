@@ -48,17 +48,20 @@
 }
 .btnUpdate {
   margin: 0px 10px;
-  background: #ffffff;
-  border: 0.5px solid #3aafa9;
+  padding: 5px 5px;
+  background: #5a88d7;
+  border: 2px solid #5a88d7;
   border-radius: 5px;
-  color: #3aafa9;
+  color: #ffffff;
   float: right;
 }
 .btnReset {
-  background: #ffffff;
-  border: 0.5px solid #3aafa9;
+  margin: 0px 10px;
+  padding: 5px 5px;
+  background: #ff0000;
+  border: 2px solid #ff0000;
   border-radius: 5px;
-  color: red;
+  color: rgb(255, 255, 255);
   float: right;
 }
 
@@ -88,10 +91,20 @@
   border: 1px solid rgb(204, 198, 198);
 }
 
+.sta {
+    background: rgb(223, 218, 218);
+    align-items: center;
+    margin: auto;
+    margin-top: 0;
+    border-radius: 5px;
+    border: 1px solid rgb(204, 198, 198);
+}
+
 .col-4 {
-  background:rgb(230, 225, 225);
-  border: 1px solid rgb(223, 218, 218);
-  padding: 5px;
+  /* background:rgb(230, 225, 225); */
+  /* border: 1px solid rgb(223, 218, 218); */
+  margin-left: 25px;
+  padding: 15px;
 }
 
 .form.input {
@@ -107,10 +120,10 @@ input#file-input,input#upd-file {
 }
 
 input#file-input+ label,input#upd-file + label {
-  background-color: #3aafa9;
+  background-color: #5a88d7;
   padding: 8px;
   color: #ffffff;
-  border: 2px solid #43e5dd;
+  border: 2px solid #80a4e0;
   border-radius: 9px;
   margin: 5px;
   align-items: center;

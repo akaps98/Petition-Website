@@ -136,7 +136,7 @@ export default function BasicProfile() {
     <main>
       <div className="container main-body">
         <div className="row">
-          <div className="col-md-9">
+          <div className="col-md-12">
             <h1 className="h1 row-2 mb-4">My Account</h1>
             <div className="row">
               <div className="col-4 col-md-3 ohhh">
@@ -198,7 +198,7 @@ export default function BasicProfile() {
             <br />
             <br />
 
-            <div className="">
+            <div className="sta">
               <div className="row">
                 <div className="col-4 text-dark input text">
                   Gender
