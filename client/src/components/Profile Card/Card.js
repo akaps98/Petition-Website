@@ -26,7 +26,7 @@ const ProfileCard = (props) => {
         {/* If owner, not showing Contact button */}
         {!sessionStorage.getItem("token") ? (
             <p className="guestmsg">
-            <sub>Please log in to support</sub></p>
+            <sub>Please log in to sign</sub></p>
         ) : props.billboardOwnerEmail != sessionStorage.getItem("userEmail") ? (
           <ModalContact billboardID={props._id} billboardOwnerEmail={props.billboardOwnerEmail} />
         ) : (

@@ -40,10 +40,6 @@ function EditBillboardModal(props) {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
-        Edit
-      </Button>
-
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Edit Billboard's Information</Modal.Title>

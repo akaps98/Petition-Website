@@ -41,8 +41,8 @@ if (billboards) {
                   _id={billboards[0]._id}
                   title={billboards[0].title}
                   type={billboards[0].type}
-                  area={billboards[0].area}
-                  price={billboards[0].price}
+                  current={billboards[0].current}
+                  goal={billboards[0].goal}
                   description={billboards[0].description}
                   billboardImg={billboards[0].billboardImg}
                   billboardOwnerEmail={billboardOwnerEmail}
@@ -52,9 +52,10 @@ if (billboards) {
             <div className="col p-3">
               <Features
                 title={billboards[0].title}
+                type={billboards[0].type}
                 description={billboards[0].description}
-                area={billboards[0].area}
-                price={billboards[0].price}
+                current={billboards[0].current}
+                goal={billboards[0].goal}
               />
             </div>
           </div>

@@ -27,7 +27,7 @@ const BillboardSchema = new mongoose.Schema({
   },
   status: {
     type: String,
-    default: "Incompleted",
+    default: "Unchecked",
   },
   billboardImg: { type: Object },
 });
