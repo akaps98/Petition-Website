@@ -21,16 +21,18 @@ import BasicProfile from "./routes/user-routes/Profile/BasicProfile";
 import Users from "./routes/admin-routes/ad-users";
 import AdminLogin from "./components/LoginSignup/AdminLogin";
 import AboutUs from "./components/Other Pages/Aboutus";
+import Term from "./components/Other Pages/terms";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={[<NavBar />, <Footer/>]}>
+        <Route element={[<NavBar />, <Footer />]}>
           <Route path="/" element={<Home />}></Route>
           <Route path="/details/:_id" element={<Details />}></Route>
           <Route path="/article/:_id" element={<GenericPage />}></Route>
           <Route path="/aboutus" element={<AboutUs />}></Route>
+          <Route path="/term" element={<Term />}></Route>
 
           <Route path="/login" element={<LoginForm />} />
           <Route path="/signup" element={<SignupForm />} />
