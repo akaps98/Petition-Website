@@ -1,0 +1,27 @@
+.title {
+    font-family: nunito;
+    text-align: center;
+}
+
+main {
+    width: 50%;
+    margin-left: 300px;
+}
+
+h6 {
+    font-family: nunito;
+}
+
+.container-fluid {
+    width: 75%;
+}
+
+.content_title {
+    margin-top: 20px;
+    font-family: nunito;
+}
+
+.content {
+    margin-top: 20px;
+    font-family:raleway; 
+}

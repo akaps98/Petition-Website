@@ -1,0 +1,55 @@
+.aboutus {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.eachinfo {
+    list-style-type: none;
+    text-align: left;
+}
+
+.about_text {
+    text-align: center;
+}
+
+.about_content {
+    text-align: center;
+}
+
+.content {
+    border: 1px solid black;
+    text-align: center;
+    margin: 10px;
+    width: 370px;
+    border-radius: 20px;
+}
+
+.profile_pic img {
+    width: 300px;
+    height: 350px;
+    object-fit: fill;
+}
+
+.content, .profile_pic {
+    position: relative;
+    display: inline-block;
+}
+
+.about_name {
+    padding-top: 7px;
+    font-weight: bold;
+    font-family: nunito;
+}
+
+.role {
+    font-weight: bold;   
+    font-family:montserrat;
+}
+
+.details {
+    font-family:raleway;
+}

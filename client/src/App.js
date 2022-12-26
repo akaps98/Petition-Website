@@ -20,6 +20,7 @@ import SignupForm from "./components/LoginSignup/SignupForm";
 import BasicProfile from "./routes/user-routes/Profile/BasicProfile";
 import Users from "./routes/admin-routes/ad-users";
 import AdminLogin from "./components/LoginSignup/AdminLogin";
+import AboutUs from "./components/Other Pages/Aboutus";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="/" element={<Home />}></Route>
           <Route path="/details/:_id" element={<Details />}></Route>
           <Route path="/article/:_id" element={<GenericPage />}></Route>
+          <Route path="/aboutus" element={<AboutUs />}></Route>
 
           <Route path="/login" element={<LoginForm />} />
           <Route path="/signup" element={<SignupForm />} />

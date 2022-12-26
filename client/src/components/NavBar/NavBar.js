@@ -58,9 +58,9 @@ export default function NavBar() {
       <div id="nav_cont" class="nav_cont">
         <ul class="nav_list">
           <li>
-            <a class="menu" href="#">
+            <Link to="/aboutus" className="menu">
               About Us
-            </a>
+            </Link>
           </li>
           <li>
             <a class="menu" href="#">
