@@ -33,7 +33,7 @@ const MyBillboards = () => {
   userToken();
 
   return (
-    <main>
+  <div>  
       <h2 className="col col-lg-auto tab-header">My billboards</h2>
       <div className="row filters">
         <div className="col-12 col-sm-3 filter-container">
@@ -65,8 +65,8 @@ const MyBillboards = () => {
             }}
           >
             <option defaultValue="All">All</option>
-            <option value="Available">Completed</option>
-            <option value="Occupied">Incompleted</option>
+            <option value="Available">Checked</option>
+            <option value="Occupied">Pending</option>
           </select>
         </div>
         <div className="col-12 col-md-4 btn-container">
@@ -92,7 +92,7 @@ const MyBillboards = () => {
             ></Card>
           ))}
       </div>
-    </main>
+    </div>
   );
 };
 

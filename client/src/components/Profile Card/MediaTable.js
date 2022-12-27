@@ -3,33 +3,27 @@ import './MediaTable.css';
 
 export default function MediaTable(props) {
     return (
-        <table className='table table-hover'>
-            <tbody>
-                {/* <tr>
+      <table className="table table-hover">
+        <tbody>
+          {/* <tr>
                     <th scope="row">{props.title}</th>
                     <td>
                         {props.title}
                     </td>
                 </tr> */}
-                <tr>
-                    <th scope="row">Title</th>
-                    <td>
-                        {props.title}
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">Category</th>
-                    <td>
-                        {props.type}
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">Description</th>
-                    <td>
-                            {props.description}
-                    </td>
-                </tr>
-                {/* <tr>
+          <tr>
+            <th scope="row">Title</th>
+            <td>{props.title}</td>
+          </tr>
+          <tr>
+            <th scope="row">Category</th>
+            <td>{props.type}</td>
+          </tr>
+          <tr>
+            <th scope="row">Description</th>
+            <td>{props.description}</td>
+          </tr>
+          {/* <tr>
                     <th scope="row">Area</th>
                     <td>{props.area}</td>
                 </tr>
@@ -44,13 +38,19 @@ export default function MediaTable(props) {
                         : props.price}{" "}
                         / year</td>
                 </tr> */}
-                <tr>
-                    <th scope="row">Proccess</th>
-                    <td>
-                        {props.current} out of {props.goal}
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    )
+          <tr>
+            <th scope="row">Proccess</th>
+            <td>
+              {props.current} out of {props.goal}
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Remaining day</th>
+            <td>
+              {props.day} days
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    );
 };

@@ -19,6 +19,7 @@ function LoginForm() {
       sessionStorage.setItem("token", res.data);
       if (typeof window !== 'undefined') {
         sessionStorage.setItem('userEmail', data.email);
+        sessionStorage.setItem("signed", data.signed);
       }
       window.location = "/";
       console.log(res.message);

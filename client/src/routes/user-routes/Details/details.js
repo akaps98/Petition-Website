@@ -26,10 +26,6 @@ function Details() {
   }, []);
 
 
-{
-  billboards && console.log(billboards)
-} 
-
 if (billboards) {
     return (
       <main>
@@ -46,6 +42,7 @@ if (billboards) {
                   description={billboards[0].description}
                   billboardImg={billboards[0].billboardImg}
                   billboardOwnerEmail={billboardOwnerEmail}
+                  signed={billboards[0].signed}
                 />
               )}
             </div>
@@ -56,6 +53,7 @@ if (billboards) {
                 description={billboards[0].description}
                 current={billboards[0].current}
                 goal={billboards[0].goal}
+                day={billboards[0].day}
               />
             </div>
           </div>

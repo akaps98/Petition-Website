@@ -29,6 +29,13 @@ const BillboardSchema = new mongoose.Schema({
     type: String,
     default: "Unchecked",
   },
+  day: {
+    type: Number,
+    default: 200,
+  },
+  signed: {
+    type: [String]
+  },
   billboardImg: { type: Object },
 });
 

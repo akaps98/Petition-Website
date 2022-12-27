@@ -133,7 +133,7 @@ export default function BasicProfile() {
   };
 
   return (
-    <main>
+    <div>
       <div className="container main-body">
         <div className="row">
           <div className="col-md-12">
@@ -279,6 +279,6 @@ export default function BasicProfile() {
           </div>
         </div>
       </div>
-    </main>
+    </div>
   );
 }
