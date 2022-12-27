@@ -86,7 +86,7 @@ billboardRouter.post(
         });
         return res
           .status(200)
-          .send( "New petition successfully added!");
+          .send( "Your petition is put into the pending list!");
       } catch (err) {
         console.error(err);
         return res

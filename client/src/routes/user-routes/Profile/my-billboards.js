@@ -1,15 +1,15 @@
 import Card from "../../../components/Card/card";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Button } from "react-bootstrap";
 import "./profile.css";
-import AddBillBoardModal from '../../../components/Add Billboard Modal/index'
-import Spinner from 'react-bootstrap/Spinner';
+import AddBillBoardModal from "../../../components/Add Billboard Modal/index";
+import Spinner from "react-bootstrap/Spinner";
 
 const MyBillboards = () => {
   const [ownerEmail] = useState(sessionStorage.getItem("userEmail"));
   const [billboards, setBillboards] = useState([]);
-  const [billboardType, setBillboardType] = useState("All");
-  const [billboardStatus, setBillboardStatus] = useState("All");
+  const [category, setCategory] = useState("All");
   const [loading, setLoading] = useState(false);
   const token = sessionStorage.getItem("token");
   const navigate = useNavigate();
@@ -26,24 +26,27 @@ const MyBillboards = () => {
 
   useEffect(() => {
     fetch(`http://localhost:5000/billboards/my-billboards/${ownerEmail}`)
-      .then(res => res.json())
-      .then(data => {setBillboards(data);setLoading(true);})
-  }, [billboards])
+      .then((res) => res.json())
+      .then((data) => {
+        setBillboards(data);
+        setLoading(true);
+      });
+  }, [billboards]);
 
   userToken();
 
   return (
-  <div>  
+    <div>
       <h2 className="col col-lg-auto tab-header">My billboards</h2>
       <div className="row filters">
         <div className="col-12 col-sm-3 filter-container">
-          Billboard type
+          Category
           <select
             className="col-12 col-md-4 form-select"
             aria-label="Select billboard type"
             onChange={(e) => {
               let selectedType = e.target.value;
-              setBillboardType(selectedType);
+              setCategory(selectedType);
             }}
           >
             <option defaultValue="All">All</option>
@@ -54,23 +57,15 @@ const MyBillboards = () => {
             <option value="Health">Health</option>
           </select>
         </div>
-        <div className="col-12 col-md-4 filter-container">
-          Status
-          <select
-            className="form-select"
-            aria-label="Select status"
-            onChange={(e) => {
-              let selectedType = e.target.value;
-              setBillboardStatus(selectedType);
-            }}
-          >
-            <option defaultValue="All">All</option>
-            <option value="Available">Checked</option>
-            <option value="Occupied">Pending</option>
-          </select>
-        </div>
+
         <div className="col-12 col-md-4 btn-container">
-          <AddBillBoardModal />
+          {billboards.length != 0 ? (
+            <Button disabled>
+              Please complete to current petition before creating a new one
+            </Button>
+          ) : (
+            <AddBillBoardModal />
+          )}
         </div>
       </div>
       {!loading ? (
@@ -82,12 +77,21 @@ const MyBillboards = () => {
       ) : null}
       <div className="row" id="items">
         {billboards
+          .filter((item) => {
+            if (category == "All") {
+              return item.status == "Checked";
+            } else {
+              return item.type == category && item.status == "Checked";
+            }
+          })
           .map((filteredItem) => (
             <Card
               id={filteredItem?._id}
               title={filteredItem?.title}
               description={filteredItem?.description}
-              price={filteredItem?.price}
+              goal={filteredItem?.goal}
+              current={filteredItem?.current}
+              day={filteredItem?.day}
               billboardImg={filteredItem.billboardImg}
             ></Card>
           ))}

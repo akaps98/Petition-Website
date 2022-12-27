@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import thumbnail from "../../assets/ElonMusk.jpg";
 import "./card.css";
+import ProgressBar from "react-bootstrap/ProgressBar";
 
 const Card = (props) => {
   return (
@@ -18,21 +19,32 @@ const Card = (props) => {
         </div>
       </Link>
 
-      <p className="title">{props.title}</p>
-      <div class="box-content-bottom">
-        <div class="box-bottom-left">
-          <strong class="petition-signer-count theme-text-variant-3 cut-text">
-            4,211{" "}
+      <div className="title">
+        <p className="title">{props.title}</p>
+      </div>
+
+      <div>
+        <ProgressBar
+          striped
+          variant="success"
+          now={Math.ceil(props.current / props.goal)}
+        ></ProgressBar>
+      </div>
+
+      <div className="box-content-bottom">
+        <div className="box-bottom-left">
+          <strong className="petition-signer-count theme-text-variant-3 cut-text">
+            {props.current}{" "}
           </strong>
-          <span class="theme-text-variant-5 cut-text">signatures </span>
+          <span className="theme-text-variant-5 cut-text">signatures </span>
         </div>
 
-        <div class="box-bottom-right cut-text">
-          <strong class="petition-days-left theme-text-variant-3 cut-text">
-            197 days{" "}
+        <div className="box-bottom-right cut-text">
+          <strong className="petition-days-left theme-text-variant-3 cut-text">
+            {props.day}{" "}
           </strong>
 
-          <span class="theme-text-variant-5 cut-text">remaining </span>
+          <span className="theme-text-variant-5 cut-text">days remaining </span>
         </div>
       </div>
     </div>

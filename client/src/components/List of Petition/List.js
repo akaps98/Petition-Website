@@ -16,8 +16,6 @@ export default function List() {
       });
   }, []);
 
-  console.log(billboards);
-
   return (
     <div className="container">
       <div className="row filters">
