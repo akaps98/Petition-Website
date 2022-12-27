@@ -48,7 +48,7 @@ function ModalContact(props) {
   return (
     <>
       <Button variant="primary" onClick={handleShow}>
-        Contact
+        Sign the petition
       </Button>
 
       <Modal show={show} onHide={handleClose}>

@@ -5,11 +5,6 @@ import ModalContact from "../Modal Form Contact/ContactForm";
 import EditBillboardModal from "../Edit Billboard Modal";
 
 const ProfileCard = (props) => {
-  const cardDetail = {
-    image: "https://i.insider.com/50f967f56bb3f7830a000019",
-    title: "Lebron James",
-    text: "THE GOAT",
-  };
 
   return (
     <Card className="box">

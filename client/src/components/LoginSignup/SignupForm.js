@@ -94,7 +94,6 @@ function SignupForm() {
   };
 
   return (
-    <main>
       <div className={LogStyle.box}>
         <div className={LogStyle.form}>
           <form className="signup">
@@ -186,7 +185,6 @@ function SignupForm() {
           </form>
         </div>
       </div>
-    </main>
   );
 }
 
