@@ -36,6 +36,7 @@ function LoginForm() {
   };
 
   return (
+    <div><hr/>
       <div className={LogStyle.box}>
         <div className={LogStyle.form}>
           <form className="login" onSubmit={handleSubmit}>
@@ -79,7 +80,7 @@ function LoginForm() {
           </form>
         </div>
       </div>
-  
+    </div>
   );
 }
 

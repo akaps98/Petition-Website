@@ -1,6 +1,8 @@
 .title {
-    font-family: nunito;
+    font-family: montserrat;
     text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 main {
@@ -21,7 +23,7 @@ h6 {
     font-family: nunito;
 }
 
-.content {
+.eachcontent {
     margin-top: 20px;
     font-family:raleway; 
 }

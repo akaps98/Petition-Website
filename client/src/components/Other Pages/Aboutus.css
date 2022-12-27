@@ -1,3 +1,16 @@
+footer {
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.masthead {
+    display: inline-block;
+}
+
+.aboutustext {
+    margin-top: -35px;
+}
+
 .aboutus {
     width: 100%;
     display: flex;
@@ -8,6 +21,7 @@
 }
 
 .eachinfo {
+    margin: 3px 0px;
     list-style-type: none;
     text-align: left;
 }
@@ -16,7 +30,7 @@
     text-align: center;
 }
 
-.about_content {
+.about_contents {
     text-align: center;
 }
 
