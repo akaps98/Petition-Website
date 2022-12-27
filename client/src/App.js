@@ -22,6 +22,7 @@ import Users from "./routes/admin-routes/ad-users";
 import AdminLogin from "./components/LoginSignup/AdminLogin";
 import AboutUs from "./components/Other Pages/Aboutus";
 import Term from "./components/Other Pages/terms";
+import List from "./components/List of Petition/List";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
           <Route path="/article/:_id" element={<GenericPage />}></Route>
           <Route path="/aboutus" element={<AboutUs />}></Route>
           <Route path="/term" element={<Term />}></Route>
+          <Route path="/list" element={<List />}></Route>
 
           <Route path="/login" element={<LoginForm />} />
           <Route path="/signup" element={<SignupForm />} />

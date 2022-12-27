@@ -28,7 +28,7 @@ const Home = () => {
                     <div class="text-center">
                         <h1 class="mb-3 raiseyourvoice">Raise your voice</h1>
                         <h1 class="fs-5 mb-4 makeyourlife">Make your life relaxed, make other's life beautiful</h1>
-                        <Link to="/#">
+                        <Link to="/list">
                             <button type="button" class="btn btn-outline-primary letspetition">Let's petition!</button>
                         </Link>
                         
