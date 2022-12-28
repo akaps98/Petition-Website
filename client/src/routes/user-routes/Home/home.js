@@ -20,8 +20,8 @@ const Home = () => {
     //     .then(data => {setBillboard(data);setLoading(true);})
     // }, [])
     return (
+        <div><hr/>
         <header class="masthead">
-        <hr/>
         <div class="container position-relative first-main">
             <div class="row justify-content-center">
                 <div class="col-xl-6">
@@ -69,6 +69,7 @@ const Home = () => {
             </div>
         </div>
     </header>
+    </div>
     );
 };
 

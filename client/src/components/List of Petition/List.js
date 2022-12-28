@@ -17,6 +17,7 @@ export default function List() {
   }, []);
 
   return (
+    <div><hr/>
     <div className="container">
       <div className="row filters">
         <div className="col-6 col-sm-4 col-md-4 filter-container">
@@ -68,6 +69,7 @@ export default function List() {
             ></Card>
           ))}
       </div>
+    </div>
     </div>
   );
 }

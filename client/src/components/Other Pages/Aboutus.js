@@ -8,11 +8,12 @@ import Yen from "./Yen.jpg";
 
 export default function AboutUs() {
   return (
+    <div><hr/>
     <div class="masthead">
       <div class="container position-relative first-main">
         <div class="row justify-content-center">
-          <div class="col-xl-6">
-            <div class="text-center">
+          <div class="col-xl-6 aboutusbox">
+            <div class="text-center aboutustext">
               <h1 class="mb-3 raiseyourvoice">About Us</h1>
               <h1 class="fs-5 mb-4 makeyourlife">
                 We try to make the world better
@@ -60,7 +61,7 @@ export default function AboutUs() {
               <li class="eachinfo role">- Frontend Dev.</li>
               <li class="eachinfo details">Contact: S3885751@rmit.edu.vn</li>
               <li class="eachinfo details">
-                Motto: All that I am, I am because of my mind
+                Motto: I am because of my mind
               </li>
             </ul>
           </div>
@@ -96,19 +97,7 @@ export default function AboutUs() {
           </div>
         </div>
       </div>
-      <footer class="footer">
-        <div class="footer-container">
-          <div class="row">
-            <div clas="col-lg-6 h-100 text-center text-lg-start my-auto">
-              <ul class="list-inline mb-1 center">
-                <p class="text-muted small mb-1 mb-lg-0 copyright">
-                  Copyright &copy; 2022 NoName. All Rights Reserved.
-                </p>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </footer>
+    </div>
     </div>
   );
 }
