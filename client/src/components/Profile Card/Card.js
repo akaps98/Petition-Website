@@ -17,10 +17,6 @@ const ProfileCard = (props) => {
       />
       <Card.Body>
         <Card.Title className="title">{props.title}</Card.Title>
-        {/* I think 'goal status' should be here */}
-        {/* <Card.Text>{card.text}</Card.Text> */}
-
-        {/* If owner, not showing Contact button */}
         {!sessionStorage.getItem("token") ? (
           <p className="guestmsg">
             <sub>Please log in to sign</sub>

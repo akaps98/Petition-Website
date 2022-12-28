@@ -108,6 +108,19 @@ billboardRouter.put('/edit/:_id', function(req, res){
   })
 })
 
+billboardRouter.put("/approve", function (req, res) {
+  const id = req.body.id;
+  const status = req.body.status;
+  billboardSchema.findOneAndUpdate(
+    { _id: id },
+    { status: status },
+    function (err, result) {
+      res.status(200).json({ successMsg: "Successfully approve!" });
+    }
+  );
+});
+
+
 
 // delete a billboard
 billboardRouter.delete("/:id", async (req, res) => {

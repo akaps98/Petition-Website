@@ -8,11 +8,7 @@ const CardAd = (props) => {
   const deleteBillboard = (e, id) => {
     e.preventDefault();
     try {
-      if (
-        !window.confirm(
-          "Are you sure you want to delete this billboard?"
-        )
-      ) {
+      if (!window.confirm("Are you sure you want to delete this petition?")) {
         return;
       }
 
@@ -27,6 +23,27 @@ const CardAd = (props) => {
     }
   };
 
+  const approve = (e, id) => {
+    e.preventDefault();
+    try {
+      if (!window.confirm("Are you sure you want to approve this petition?")) {
+        return;
+      }
+
+      fetch(`http://localhost:5000/billboards/approve`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          id: props.id,
+          status: "Checked"
+        }),
+      }).then((res) => getResponse(res));
+    } catch (err) {
+      console.error(err);}
+  }
+
   return (
     <div className="col-12 col-sm-6 col-md-3 bg-light item-container ">
       <Link to={`/details/${props.id}`}>
@@ -39,21 +56,41 @@ const CardAd = (props) => {
             <img src={thumbnail} alt="item-thumbnail" />
           )}
         </div>
-        <p className="title">{props.title}</p>
-        <p className="description">{props.description}</p>
-        <p className="price">
-          {props.price
-            ? props.price.toLocaleString("it-IT", {
-                style: "currency",
-                currency: "VND",
-              })
-            : props.price}{" "}
-          / year
-        </p>
       </Link>
-      <button className="btn danger" onClick={(e) => deleteBillboard(e, props.id)}>
-        Delete
-      </button>
+
+      <div className="box-content-bottom">
+        <div className="box-bottom-left">
+          <strong className="petition-signer-count theme-text-variant-3 cut-text">
+            {props.current}{" "}
+          </strong>
+          <span className="theme-text-variant-5 cut-text">signatures </span>
+        </div>
+
+        <div className="box-bottom-right cut-text">
+          <strong className="petition-days-left theme-text-variant-3 cut-text">
+            {props.day}{" "}
+          </strong>
+
+          <span className="theme-text-variant-5 cut-text">days remaining </span>
+        </div>
+      </div>
+
+      <div className="btn-contain">
+        <button
+          className="btn btn-danger float-left"
+          onClick={(e) => deleteBillboard(e, props.id)}
+        >
+          Delete
+        </button>
+        {props.status == "Unchecked" ? (
+          <button
+            className="btn btn-success float-right"
+            onClick={(e) => approve(e, props.id)}
+          >
+            Approve
+          </button>
+        ) : null}
+      </div>
     </div>
   );
 };

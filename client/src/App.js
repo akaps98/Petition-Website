@@ -51,8 +51,7 @@ function App() {
 
         {/* Route for admin */}
         <Route element={<SideMenu />}>
-          <Route path="/admin/" element={<Dashboard />}></Route>
-          <Route path="/admin/billboards" element={<Billboards />}></Route>
+          <Route path="/admin/" element={<Billboards />}></Route>
           <Route path="/admin/users" element={<Users />}></Route>
           <Route path="/admin/pages" element={<Pages />}></Route>
           <Route

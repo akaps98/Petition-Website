@@ -26,26 +26,14 @@ const SideMenu = () => {
                     </li>
                     <li className="side-nav-link">
                         <NavLink to="/admin/">
-                            <span className="side-nav-icon"><em className="fas fa-home"></em></span>
-                            <span className="title">Dashboard</span>
-                        </NavLink>
-                    </li>
-                    <li className="side-nav-link">
-                        <NavLink to="/admin/billboards">
                             <span className="side-nav-icon"><em className="fas fa-ad"></em></span>
-                            <span className="title">Billboards</span>
+                            <span className="title">Petitions</span>
                         </NavLink>
                     </li>
                     <li className="side-nav-link">
                         <NavLink to="/admin/users">
                             <span className="side-nav-icon"><em className="fas fa-user"></em></span>
                             <span className="title">Users</span>
-                        </NavLink>
-                    </li>
-                    <li className="side-nav-link">
-                        <NavLink to="/admin/pages">
-                            <span className="side-nav-icon"><em className="fas fa-file"></em></span>
-                            <span className="title">Pages</span>
                         </NavLink>
                     </li>
     

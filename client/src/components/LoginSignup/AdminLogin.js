@@ -15,7 +15,7 @@ function AdminLogin() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (data.email == "cosc2769@gmail.com" && data.password == "furtherwebprogramming") {
+    if (data.email == "test@gmail.com" && data.password == "test123") {
       sessionStorage.setItem("admin", "furtherwebprogramming");
       navigate("/admin")
     } else {
