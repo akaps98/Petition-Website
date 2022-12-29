@@ -5,7 +5,6 @@ import ModalContact from "../Modal Form Contact/ContactForm";
 import EditBillboardModal from "../Edit Billboard Modal";
 
 const ProfileCard = (props) => {
-
   const [signed, setSigned] = useState(props.signed);
 
   return (
@@ -19,7 +18,7 @@ const ProfileCard = (props) => {
         <Card.Title className="title">{props.title}</Card.Title>
         {!sessionStorage.getItem("token") ? (
           <p className="guestmsg">
-            <sub>Please log in to sign</sub>
+            <sub>Please log in to sign the petiton</sub>
           </p>
         ) : props.billboardOwnerEmail != sessionStorage.getItem("userEmail") ? (
           signed.includes(sessionStorage.getItem("userEmail")) ? (
@@ -34,14 +33,19 @@ const ProfileCard = (props) => {
             />
           )
         ) : (
-          <EditBillboardModal
-            _id={props._id}
-            title={props.title}
-            type={props.type}
-            area={props.area}
-            price={props.price}
-            description={props.description}
-          />
+          <div>
+            <p className="guestmsg">
+              <sub>You cannot sign your own petition</sub>
+            </p>
+            <EditBillboardModal
+              _id={props._id}
+              title={props.title}
+              type={props.type}
+              area={props.area}
+              price={props.price}
+              description={props.description}
+            />
+          </div>
         )}
       </Card.Body>
     </Card>
