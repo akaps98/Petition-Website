@@ -28,6 +28,7 @@ function Details() {
 
 if (billboards) {
     return (
+      <div><hr/>
       <main>
         <div className="container">
           <div className="row">
@@ -59,6 +60,7 @@ if (billboards) {
           </div>
         </div>
       </main>
+      </div>
     );
 }else{
   return(

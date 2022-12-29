@@ -61,7 +61,7 @@ export default function AboutUs() {
               <li class="eachinfo role">- Frontend Dev.</li>
               <li class="eachinfo details">Contact: S3885751@rmit.edu.vn</li>
               <li class="eachinfo details">
-                Motto: I am because of my mind
+                Motto: Share your uniqueness
               </li>
             </ul>
           </div>

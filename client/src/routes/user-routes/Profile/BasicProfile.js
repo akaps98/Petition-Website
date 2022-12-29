@@ -133,6 +133,7 @@ export default function BasicProfile() {
   };
 
   return (
+    <div><hr/>
     <div>
       <div className="container main-body">
         <div className="row">
@@ -279,6 +280,7 @@ export default function BasicProfile() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }

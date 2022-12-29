@@ -6,18 +6,19 @@
 }
 
 .tab {
+    width: 180px;
     font-size: 20px;
     padding: 10px;
     color: #000;
     transition: all 0.5s ease;
     text-align: left !important;
-    margin: auto;
-    border-radius: 5px ;
+    margin: 1px;
+    border-radius: 5px;
     border: #000 0.5px;
 }
 
 .nav{
-    padding: 5px;
+    padding: 15px;
 }
 
 
