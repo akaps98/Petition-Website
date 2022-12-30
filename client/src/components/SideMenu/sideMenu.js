@@ -19,14 +19,14 @@ const SideMenu = () => {
     return (
         <div className="admin-container">
             <div className="side-nav">
-                <ul>
+                <ul className="side-nav-ul">
                     <li className="side-nav-link logo-container">
-                        <span className="side-nav-icon"><em className="fas fa-bold"></em></span>
-                        <span className="title">BillBoarDad</span>
+                        <span className="side-nav-icon"><em className="fa-solid fa-n"></em></span>
+                        <span className="title">NoName</span>
                     </li>
                     <li className="side-nav-link">
                         <NavLink to="/admin/">
-                            <span className="side-nav-icon"><em className="fas fa-ad"></em></span>
+                            <span className="side-nav-icon"><em className="fa-regular fa-paper-plane"></em></span>
                             <span className="title">Petitions</span>
                         </NavLink>
                     </li>
