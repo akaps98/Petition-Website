@@ -38,7 +38,7 @@ const MyBillboards = () => {
   return (
     <div><hr/>
     <div>
-      <h2 className="col col-lg-auto tab-header">My Petitions</h2>
+      <h2 className="col col-lg-auto tab-header">My Petition</h2>
       <div className="row filters">
         <div className="col-12 col-sm-3 filter-container">
           Category
