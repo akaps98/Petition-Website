@@ -36,8 +36,9 @@ const MyBillboards = () => {
   userToken();
 
   return (
+    <div><hr/>
     <div>
-      <h2 className="col col-lg-auto tab-header">My billboards</h2>
+      <h2 className="col col-lg-auto tab-header">My Petitions</h2>
       <div className="row filters">
         <div className="col-12 col-sm-3 filter-container">
           Category
@@ -96,6 +97,7 @@ const MyBillboards = () => {
             ></Card>
           ))}
       </div>
+    </div>
     </div>
   );
 };
