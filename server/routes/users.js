@@ -11,6 +11,10 @@ router.post("/", async (req, res) => {
     const user = await User.findOne({ email: req.body.email });
     if (user)
       return res.status(400).send({ message: "Email has been registed!" });
+    
+    const user2 = await User.findOne({ phone: req.body.phone });
+    if (user2)
+      return res.status(400).send({ message: "Phone number has been registed!" });
 
     const salt = await bcrypt.genSalt(Number(process.env.SALT));
     const hashPassword = await bcrypt.hash(req.body.password, salt);

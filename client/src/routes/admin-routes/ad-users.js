@@ -22,28 +22,6 @@ useEffect(() => {
 
     const users = LoadUsers();
 
-    const deleteUser = (e, id) => {
-      e.preventDefault();
-      try {
-        if (
-          !window.confirm(
-            "Deleting the user also deletes all of its contents.\nAre you sure you want to proceed?"
-          )
-        ) {
-          return;
-        }
-
-        fetch(`http://localhost:5000/users/${id}`, {
-          method: "DELETE",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }).then((res) => getResponse(res));
-      } catch (err) {
-        console.error(err);
-      }
-    };
-    
     return (
       <div>
         <h1>Users</h1>
@@ -80,7 +58,6 @@ useEffect(() => {
                 <th>Email address</th>
                 <th>Phone number</th>
                 <th>Register date</th>
-                <th>Options</th>
               </tr>
             </thead>
             <tbody>
@@ -90,14 +67,6 @@ useEffect(() => {
                   <td>{user.email}</td>
                   <td>{user.phone}</td>
                   <td>{user.createdAt}</td>
-                  <td>
-                    <button
-                      className="btn danger"
-                      onClick={(e) => deleteUser(e, user._id)}
-                    >
-                      Delete
-                    </button>
-                  </td>
                 </tr>
               ))}
             </tbody>
