@@ -6,7 +6,6 @@ import ProgressBar from "react-bootstrap/ProgressBar";
 import { getResponse } from "../../middleware/response";
 
 const Card = (props) => {
-
   const deleteBillboard = (e, id) => {
     e.preventDefault();
     try {
@@ -68,14 +67,16 @@ const Card = (props) => {
         </div>
       </div>
 
-      <div className="btn-contain">
-        <button
-          className="btn btn-danger float-right"
-          onClick={(e) => deleteBillboard(e, props.id)}
-        >
-          Delete
-        </button>
-      </div>
+      {props.owner == sessionStorage.getItem("userEmail") ? (
+        <div className="btn-contain">
+          <button
+            className="btn btn-danger float-right"
+            onClick={(e) => deleteBillboard(e, props.id)}
+          >
+            Delete
+          </button>
+        </div>
+      ) : null}
     </div>
   );
 };
