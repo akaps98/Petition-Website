@@ -26,29 +26,6 @@ useEffect(() => {
       <div>
         <h1>Users</h1>
 
-        {/* Filter section */}
-        <div className="row filters">
-          <div className="col-6 col-sm-4 col-md-3 filter-container">
-            Time Range
-            <select className="form-select" aria-label="Select billboard type">
-              <option defaultValue="0">Lastest</option>
-              <option value="1">Oldest</option>
-              <option value="2">Most Billboard</option>
-              <option value="3">Most Order</option>
-            </select>
-          </div>
-
-          <div className="col-6 col-sm-4 col-md-3 filter-container">
-            Name Search
-            <input
-              type="text"
-              placeholder="Name here..."
-              className="form-control"
-              aria-label="Select billboard type"
-            />
-          </div>
-        </div>
-
         {/* Data display section */}
         <div className="table-box">
           <table className="table pages">
