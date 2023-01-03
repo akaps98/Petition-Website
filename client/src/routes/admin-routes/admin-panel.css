@@ -1,7 +1,11 @@
 /* GENERAL STYLING */
-.table td, .table th {
+.table td, .table{
     text-align: center;
     align-items: center;
+}
+
+th {
+    text-align: left;
 }
 
 .table .btn {
