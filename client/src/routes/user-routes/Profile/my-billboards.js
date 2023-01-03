@@ -59,10 +59,10 @@ const MyBillboards = () => {
           </select>
         </div>
 
-        <div className="col-12 col-md-4 btn-container">
+        <div className="col-12 col-md-4 btn-container py-3">
           {billboards.length != 0 ? (
             <Button disabled>
-              Please complete to current petition before creating a new one
+              Please complete the current petition before creating a new one
             </Button>
           ) : (
             <AddBillBoardModal />

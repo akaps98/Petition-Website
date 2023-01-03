@@ -3,8 +3,28 @@ import { Link } from "react-router-dom";
 import thumbnail from "../../assets/ElonMusk.jpg";
 import "./card.css";
 import ProgressBar from "react-bootstrap/ProgressBar";
+import { getResponse } from "../../middleware/response";
 
 const Card = (props) => {
+
+  const deleteBillboard = (e, id) => {
+    e.preventDefault();
+    try {
+      if (!window.confirm("Are you sure you want to delete this petition?")) {
+        return;
+      }
+
+      fetch(`http://localhost:5000/billboards/${id}`, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }).then((res) => getResponse(res));
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   return (
     <div className="col-12 col-sm-6 col-md-3 bg-light item-container ">
       <Link to={`/details/${props.id}`}>
@@ -46,6 +66,15 @@ const Card = (props) => {
 
           <span className="theme-text-variant-5 cut-text">days remaining </span>
         </div>
+      </div>
+
+      <div className="btn-contain">
+        <button
+          className="btn btn-danger float-right"
+          onClick={(e) => deleteBillboard(e, props.id)}
+        >
+          Delete
+        </button>
       </div>
     </div>
   );
