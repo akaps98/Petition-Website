@@ -21,7 +21,7 @@ const Home = () => {
 
   const [billboards, setBillboard] = useState([]);
   const [category, setCategory] = useState("All");
-  const [status, setStatus] = useState("All");
+  const [status, setStatus] = useState("");
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -65,7 +65,6 @@ const Home = () => {
               setStatus(selectedType);
             }}
           >
-            <option defaultValue="All">All</option>
             <option value="Checked">Approved</option>
             <option value="Unchecked">Pending</option>
           </select>
@@ -83,13 +82,9 @@ const Home = () => {
       <div className="row" id="items">
         {billboards
           .filter((item) => {
-            if (category == "All" && status == "All") {
-              return item;
-            } else if (category == "All" && status != "All") {
+            if (category == "All") {
               return item.status == status;
-            } else if (status == "All" && category != "All") {
-              return item.category == category;
-            } else {
+            }  else {
               return item.type == category && item.status == status;
             }
           })

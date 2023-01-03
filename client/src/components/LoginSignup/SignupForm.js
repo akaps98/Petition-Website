@@ -56,9 +56,7 @@ function SignupForm() {
 
   const validate = (values) => {
     const errors = {};
-    const emailRegex = new RegExp(
-      "^[a-zA-Z0-9]+@[a-zA-Z0-9.-]+.[a-zA-Z]$"
-    );
+    const emailRegex = new RegExp("^[a-zA-Z0-9]+@[a-zA-Z0-9.-]+.[a-zA-Z]$");
     const passwordRegex = new RegExp(
       "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})"
     );
@@ -87,18 +85,24 @@ function SignupForm() {
     }
     if (!values.phone) {
       errors.phone = "Phone number is required!";
-    } else if (values.phone.length < 10 || values.phone.length > 11 || !phoneRegex.test(values.phone)) {
+    } else if (
+      values.phone.length < 10 ||
+      values.phone.length > 11 ||
+      !phoneRegex.test(values.phone)
+    ) {
       errors.phone = "This is not a valid phone number!";
     }
     return errors;
   };
 
   return (
-    <div><hr/>
+    <div>
+      <hr />
       <div className={LogStyle.box}>
         <div className={LogStyle.form}>
           <form className="signup">
             <h1 className={LogStyle.title}>Registration</h1>
+            <div className={LogStyle.error}>{serverError}</div>
             <div className={LogStyle.input}>
               <label htmlFor="email">Email</label>
               <div>
@@ -110,9 +114,7 @@ function SignupForm() {
                   onChange={handleChange}
                 />
               </div>
-              {!displayError.email ? (
-                <div className={LogStyle.error}>{serverError}</div>
-              ) : (
+              {!displayError.email ? null : (
                 <div className={LogStyle.error}>{displayError.email}</div>
               )}
             </div>
@@ -186,7 +188,7 @@ function SignupForm() {
           </form>
         </div>
       </div>
-      </div>
+    </div>
   );
 }
 
