@@ -21,7 +21,7 @@ const Home = () => {
 
   const [billboards, setBillboard] = useState([]);
   const [category, setCategory] = useState("All");
-  const [status, setStatus] = useState("");
+  const [status, setStatus] = useState("Checked");
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
