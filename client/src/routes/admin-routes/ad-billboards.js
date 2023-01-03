@@ -65,7 +65,7 @@ const Home = () => {
               setStatus(selectedType);
             }}
           >
-            <option value="Checked">Approved</option>
+            <option defaultValue="Checked">Approved</option>
             <option value="Unchecked">Pending</option>
           </select>
         </div>
