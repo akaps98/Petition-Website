@@ -13,7 +13,7 @@ function ModalContact(props) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      fetch(`http://localhost:5000/billboards/edit/${props._id}`, {
+      fetch(`http://localhost:5000/api/billboards/edit/${props._id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

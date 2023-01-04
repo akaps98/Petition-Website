@@ -13,7 +13,7 @@ const Card = (props) => {
         return;
       }
 
-      fetch(`http://localhost:5000/billboards/${id}`, {
+      fetch(`http://localhost:5000/api/billboards/${id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",

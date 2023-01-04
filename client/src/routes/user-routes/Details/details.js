@@ -13,7 +13,7 @@ function Details() {
   const [billboardOwnerEmail, setBillboardOwnerEmail] = useState(null);
 
   const specificBillboard = async () => {
-    await fetch(`http://localhost:5000/billboards/specific/${_id}`)
+    await fetch(`http://localhost:5000/api/billboards/specific/${_id}`)
       .then((res) => res.json())
       .then((data) => {
         setBillboard(data);

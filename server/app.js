@@ -12,6 +12,7 @@ const messageRouter = require("./routes/message");
 const checkUserInfo = require("./routes/loginToken");
 const modifyUserData = require("./routes/modifyUserData");
 const uploadProfileImg = require("./routes/uploadProfileImg");
+const path = require("path");
 
 const app = express();
 
@@ -22,7 +23,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true, limit: "30mb" }));
 app.use(
   cors({
-    origin: ["http://localhost:3000"],
+    origin: ["http://localhost:5000"],
     credentials: true,
   })
 );
@@ -38,10 +39,10 @@ app.get("/*", (req, res) => {
 });
 
 // routes
-app.use("/billboards", billboardRouter);
-app.use("/users", userRouter);
-app.use("/pages", pageRouter);
-app.use("/messages", messageRouter);
+app.use("/api/billboards", billboardRouter);
+app.use("/api/user", userRouter);
+app.use("/api/pages", pageRouter);
+app.use("/api/messages", messageRouter);
 app.use("/api/users", userRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/loginUser", checkUserInfo);

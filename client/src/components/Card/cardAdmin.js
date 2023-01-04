@@ -12,7 +12,7 @@ const CardAd = (props) => {
         return;
       }
 
-      fetch(`http://localhost:5000/billboards/${id}`, {
+      fetch(`http://localhost:5000/api/billboards/${id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -30,7 +30,7 @@ const CardAd = (props) => {
         return;
       }
 
-      fetch(`http://localhost:5000/billboards/approve`, {
+      fetch(`http://localhost:5000/api/billboards/approve`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

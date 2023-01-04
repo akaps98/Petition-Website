@@ -8,17 +8,7 @@ import Spinner from 'react-bootstrap/Spinner';
 
 // This is the home page of the web application
 const Home = () => {
-    // const [billboards, setBillboard] = useState([]);
-    // const [billboardType, setBillboardType] = useState("All");
-    // const [billboardArea, setBillboardArea] = useState("All");
-    // const [billboardPrice, setBillboardPrice] = useState("All");
-    // const [loading, setLoading] = useState(false);
 
-    // useEffect(()=>{
-    //     fetch(`http://localhost:5000/billboards`)
-    //     .then(res => res.json())
-    //     .then(data => {setBillboard(data);setLoading(true);})
-    // }, [])
     return (
         <div><hr/>
         <header class="masthead">

@@ -20,7 +20,7 @@ function EditBillboardModal(props) {
   const onSubmit = (e) => {
     e.preventDefault();
     try {
-      fetch(`http://localhost:5000/billboards/edit/${_id}`, {
+      fetch(`http://localhost:5000/api/billboards/edit/${_id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -63,19 +63,6 @@ function EditBillboardModal(props) {
               />
             </Form.Group>
 
-            {/* <Form.Group
-              className="mb-3"
-              controlId="ModalContactForm.ControlInput1"
-            >
-              <Form.Label>Image</Form.Label>
-              <Form.Control
-                type="file"
-                name="billboardImg"
-                accept="image/*"
-                required
-                onChange={onInputChange}
-              />
-            </Form.Group> */}
 
             <Form.Group className="mb-3" controlId="kindOfStand">
               <Form.Label>Type</Form.Label>

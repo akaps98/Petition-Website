@@ -25,7 +25,7 @@ const MyBillboards = () => {
   }, []);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/billboards/my-billboards/${ownerEmail}`)
+    fetch(`http://localhost:5000/api/billboards/my-billboards/${ownerEmail}`)
       .then((res) => res.json())
       .then((data) => {
         setBillboards(data);

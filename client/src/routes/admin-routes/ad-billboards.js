@@ -25,7 +25,7 @@ const Home = () => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/billboards`)
+    fetch(`http://localhost:5000/api/billboards`)
       .then((res) => res.json())
       .then((data) => {
         setBillboard(data);

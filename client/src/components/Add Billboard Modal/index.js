@@ -23,26 +23,6 @@ function ModalContact() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   try {
-  //     fetch("http://localhost:5000/billboards/", {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //       body: JSON.stringify({
-  //         owner: owner,
-  //         title: title,
-  //         type: type,
-  //         goal: goal,
-  //         description: description,
-  //       }),
-  //     }).then((res) => getResponse(res));
-  //   } catch (err) {
-  //     console.error(err);
-  //   }
-  // };
 
   const onFormSubmit = async (e) => {
     e.preventDefault();
@@ -61,7 +41,7 @@ function ModalContact() {
     };
 
     await axios
-      .post("http://localhost:5000/billboards/", formData, config)
+      .post("http://localhost:5000/api/billboards/", formData, config)
       .then((res) => {
         alert(res.data);
       })

@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 export const LoadBillboards = () => {
     const [billboards, setBillboards] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/billboards')
+        fetch('http://localhost:5000/api/billboards')
             .then(res => res.json())
             .then(data => setBillboards(data))
     }, []);
@@ -14,7 +14,7 @@ export const LoadBillboards = () => {
 export const LoadUsers = () => {
     const [users, setUsers] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/users')
+        fetch('http://localhost:5000/api/user')
             .then(res => res.json())
             .then(data => setUsers(data))
     }, []);

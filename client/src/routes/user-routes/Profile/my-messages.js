@@ -22,9 +22,9 @@ const MyMessages = () => {
   userToken();
 
   useEffect(()=>{
-    fetch(`http://localhost:5000/messages/my-messages/${userEmail}`)
-    .then(res => res.json())
-    .then(data => setMessages(data))
+    fetch(`http://localhost:5000/api/messages/my-messages/${userEmail}`)
+      .then((res) => res.json())
+      .then((data) => setMessages(data));
   }, [])
 
   return (

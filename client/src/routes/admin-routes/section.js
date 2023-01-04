@@ -24,9 +24,9 @@ const Section = () => {
     const {_id} = useParams();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/pages/section/${_id}`)
-            .then(res => res.json())
-            .then(data => setSection(data))
+        fetch(`http://localhost:5000/api/pages/section/${_id}`)
+          .then((res) => res.json())
+          .then((data) => setSection(data));
     },[_id]);
 
     // Handle input
@@ -38,14 +38,13 @@ const Section = () => {
     const updateSection = (e, id) => {
         e.preventDefault();
         try {
-            fetch(`http://localhost:5000/pages/section/${id}`, {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify( section )
-            })
-                .then(res => getResponse(res))
+            fetch(`http://localhost:5000/api/pages/section/${id}`, {
+              method: "PUT",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(section),
+            }).then((res) => getResponse(res));
         }
         catch (err) {
             console.error(err);
