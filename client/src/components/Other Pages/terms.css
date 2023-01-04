@@ -25,5 +25,6 @@ h6 {
 
 .eachcontent {
     margin-top: 20px;
-    font-family:raleway; 
+    font-family:raleway;
+    text-align: justify !important; 
 }
