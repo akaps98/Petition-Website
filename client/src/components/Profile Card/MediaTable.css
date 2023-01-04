@@ -1,5 +1,7 @@
 .table{  
     /* border-radius: 5px; */
+    margin-left: 2%;
+    width: 1200px;
     border: 1.5px solid rgb(205, 205, 205);
     background: rgb(255, 255, 255);
     /* box-shadow: 0px 0px 10px 0.5px #5a88d7; */
@@ -13,3 +15,11 @@
 td {
     text-align: justify !important;
 }
+
+th {
+    width: 150px;
+}
+
+/* table {
+    width: 800px !important;
+} */
