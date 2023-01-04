@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4a58e661.css",
+    "main.js": "/static/js/main.751d67bc.js",
+    "static/media/Third.jpg": "/static/media/Third.156177e20a8a13d0f1d1.jpg",
+    "static/media/fa-solid-900.ttf": "/static/media/fa-solid-900.b48ad290d0335879a92b.ttf",
+    "static/media/fa-brands-400.ttf": "/static/media/fa-brands-400.f9ee61fab3c11e2f3ed3.ttf",
+    "static/media/Di.jpg": "/static/media/Di.6c6518ba96bbadd41ded.jpg",
+    "static/media/Phoung.jpg": "/static/media/Phoung.09f4a26e7275b2473b10.jpg",
+    "static/media/fa-solid-900.woff2": "/static/media/fa-solid-900.66104b766c3d0462b3c5.woff2",
+    "static/media/Tony.jpg": "/static/media/Tony.e30cdc7274d8cdf04dc4.jpg",
+    "static/media/Yen.jpg": "/static/media/Yen.772f1dc2c111d6d69aeb.jpg",
+    "static/media/fa-brands-400.woff2": "/static/media/fa-brands-400.e1a247a5ef41e1975742.woff2",
+    "static/media/First.jpg": "/static/media/First.c06de378cc54cdb89c60.jpg",
+    "static/media/Second.jpg": "/static/media/Second.1fef17b51bb73c151150.jpg",
+    "static/media/fa-regular-400.ttf": "/static/media/fa-regular-400.abf801b7acb6705a15ad.ttf",
+    "static/media/Seungmin.jpg": "/static/media/Seungmin.ed05571741f0d89af3d4.jpg",
+    "static/media/ElonMusk.jpg": "/static/media/ElonMusk.15e61d46a32695b4d7d7.jpg",
+    "static/media/fa-regular-400.woff2": "/static/media/fa-regular-400.639d2000c1ece92eaec8.woff2",
+    "static/media/fa-v4compatibility.ttf": "/static/media/fa-v4compatibility.f601162ae669f88823a3.ttf",
+    "static/media/fa-v4compatibility.woff2": "/static/media/fa-v4compatibility.745989aab0d69cab7e70.woff2",
+    "index.html": "/index.html",
+    "main.4a58e661.css.map": "/static/css/main.4a58e661.css.map",
+    "main.751d67bc.js.map": "/static/js/main.751d67bc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4a58e661.css",
+    "static/js/main.751d67bc.js"
+  ]
+}
