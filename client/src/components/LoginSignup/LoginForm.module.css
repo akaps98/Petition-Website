@@ -7,8 +7,8 @@
   position: relative;
   margin: auto;
   padding: 10px;
-  background: #def2f1;
-  border: 1px solid #def2f1;
+  background: #5a88d786;
+  border: 1px solid #5a88d786;
   border-radius: 25px;
   align-items: center;
   margin-top: 3%;
@@ -45,7 +45,7 @@
   width: 100%;
   padding: 5px;
   border-radius: 15px;
-  border: 1px solid #def2f1;
+  border: 1px solid #5a88d786;
 
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -55,9 +55,9 @@
 }
 
 .btn {
-  background: #3aafa9;
+  background: #5a88d7;
   border-radius: 50px;
-  border: 1px solid #def2f1;
+  border: 1px solid #5a88d786;
   width: 7em;
   height: 2em;
   font-size: 17px;
@@ -71,7 +71,7 @@
 }
 
 .switch a {
-  color: #3aafa9;
+  color: #5a88d7;
 }
 
 .switch a:link,
