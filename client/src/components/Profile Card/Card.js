@@ -16,7 +16,11 @@ const ProfileCard = (props) => {
       />
       <Card.Body>
         <Card.Title className="title">{props.title}</Card.Title>
-        {!sessionStorage.getItem("token") ? (
+        {props.current >= props.goal ? (
+          <p className="guestmsg">
+            <sub>The petition has completed</sub>
+          </p>
+        ) : !sessionStorage.getItem("token") ? (
           <p className="guestmsg">
             <sub>Please log in to sign the petiton</sub>
           </p>

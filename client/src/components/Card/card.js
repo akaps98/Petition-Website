@@ -46,7 +46,7 @@ const Card = (props) => {
         <ProgressBar
           striped
           variant="success"
-          now={Math.ceil(props.current / props.goal)}
+          now={(props.current / props.goal)*100}
         ></ProgressBar>
       </div>
 
