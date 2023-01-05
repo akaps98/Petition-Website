@@ -19,6 +19,7 @@ export default function Term() {
             this policy, you agree to use your personal information on NoName. If you
             do not agree with this policy, please do not use the site or provide
             personal data to NoName.
+            <br /><br />
           </h5>
         </div>
         <div class="content_title">
@@ -29,6 +30,7 @@ export default function Term() {
             In general, you may visit this site without providing personal
             information. Personal information submitted to NoName service(name, phone
             number, email address) may be collected by NoName.
+            <br /><br />
           </h5>
         </div>
         <div class="content_title">
@@ -39,6 +41,7 @@ export default function Term() {
           NoName can be used by requesting your personal information to support the
             use of our products. NoName can collect and use your personal information
             and surveys to better improve your customers' needs and products.
+            <br /><br />
           </h5>
         </div>
         <div class="content_title">
@@ -57,6 +60,7 @@ export default function Term() {
             <br />
             NoName may provide personal information on search warrants or other
             legally valid requests or orders.
+            <br /><br />
           </h5>
         </div>
         <div class="content_title">
@@ -68,6 +72,7 @@ export default function Term() {
             "cookie" that automatically recognizes your computer on your computer.
             Cookies are used for better service and to improve the site. If you
             don't want to receive cookies, you can set it up in your web browser.
+            <br /><br />
           </h5>
         </div>
         <div class="content_title">
@@ -78,6 +83,7 @@ export default function Term() {
           NoName will only disclose all personal information collected from NoName's
             website and to service providers who need the information described in
             our policies for confidentiality.
+            <br /><br />
           </h5>
         </div>
         <div class="content_title">
@@ -94,7 +100,7 @@ export default function Term() {
           <br />
           <h6>
             s3916884@rmit.edu.vn
-            <br />
+            <br /><br />
           </h6>
         </div>
         <div class="content_title">
@@ -107,6 +113,7 @@ export default function Term() {
             the policy, please contact us by e-mail or general mail at the contact
             address above. If you continue to use this Site, you are considered to
             agree to this policy.
+            <br /><br />
           </h5>
           <br />
         </div>
