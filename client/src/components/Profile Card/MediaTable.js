@@ -1,9 +1,10 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './MediaTable.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./MediaTable.css";
 
 export default function MediaTable(props) {
-    return (
-      <table className="table table-hover">
+  return (
+    <div>
+      <table className="table">
         <tbody>
           <tr>
             <th scope="row">Title</th>
@@ -17,7 +18,7 @@ export default function MediaTable(props) {
             <th scope="row">Description</th>
             <td>{props.description}</td>
           </tr>
-    
+
           <tr>
             <th scope="row">Proccess</th>
             <td>
@@ -26,11 +27,10 @@ export default function MediaTable(props) {
           </tr>
           <tr>
             <th scope="row">Remaining day</th>
-            <td>
-              {props.day} days
-            </td>
+            <td>{props.day} days</td>
           </tr>
         </tbody>
       </table>
-    );
-};
+    </div>
+  );
+}

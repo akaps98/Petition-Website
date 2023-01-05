@@ -29,7 +29,7 @@ function Details() {
 if (billboards) {
     return (
       <div><hr/>
-      <main>
+      <div>
         <div className="container">
           <div className="row">
             <div className="col-auto">
@@ -59,7 +59,7 @@ if (billboards) {
             </div>
           </div>
         </div>
-      </main>
+      </div>
       </div>
     );
 }else{
