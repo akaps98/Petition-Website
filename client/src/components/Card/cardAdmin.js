@@ -37,12 +37,13 @@ const CardAd = (props) => {
         },
         body: JSON.stringify({
           id: props.id,
-          status: "Checked"
+          status: "Checked",
         }),
       }).then((res) => getResponse(res));
     } catch (err) {
-      console.error(err);}
-  }
+      console.error(err);
+    }
+  };
 
   return (
     <div className="col-12 col-sm-6 col-md-3 bg-light item-container ">
@@ -57,6 +58,10 @@ const CardAd = (props) => {
           )}
         </div>
       </Link>
+
+      <div className="title">
+        <p className="title">{props.title}</p>
+      </div>
 
       <div className="box-content-bottom">
         <div className="box-bottom-left">

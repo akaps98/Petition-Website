@@ -3,7 +3,7 @@ import { Button, Form, FormGroup, Modal } from "react-bootstrap";
 import InputGroup from "react-bootstrap/InputGroup";
 import { getResponse } from "../../middleware/response";
 import axios from "axios";
-import './index.css';
+import "./index.css";
 
 function ModalContact() {
   const [owner] = useState(sessionStorage.getItem("userEmail"));
@@ -12,6 +12,7 @@ function ModalContact() {
   const [goal, setGoal] = useState("");
   const [description, setDescription] = useState("");
   const [file, setFile] = useState(null);
+  const [mess, setMess] = useState("");
   const handleChangeType = (e) => {
     setType(e.target.value);
   };
@@ -118,7 +119,7 @@ function ModalContact() {
               <Form.Label>Goal</Form.Label>
               <InputGroup>
                 <Form.Control
-                  type="text"
+                  type="number"
                   placeholder="Enter your goal"
                   required
                   onChange={(e) => {
